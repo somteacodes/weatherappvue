@@ -83,11 +83,11 @@
             <div class="row">
               <div class="col d-flex justify-content-between px-5 mx-5">
                 <p>
-                  <img src="img/down.svg" alt="" />
+                  <img src="./assets/down.svg" alt="" />
                   {{ weather.lowTemp }}&deg;C
                 </p>
                 <p>
-                  <img src="img/up.svg" alt="" />
+                  <img src="./assets/up.svg" alt="" />
                   {{ weather.highTemp }}&deg;C
                 </p>
               </div>
@@ -186,7 +186,10 @@ export default {
           this.clearNight = false;
           this.snowy = false;
         }
-        if (mainWeather.includes("Thunderstorm")) {
+        if (
+          mainWeather.includes("Thunderstorm") ||
+          mainWeather.includes("Rain")
+        ) {
           this.stormy = true;
           this.cloudy = false;
           this.clearSky = false;
@@ -227,7 +230,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import "./assets/animation.css";
 @import "./assets/custom.css";
 </style>
