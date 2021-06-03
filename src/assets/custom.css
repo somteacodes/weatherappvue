@@ -10,10 +10,7 @@
   background: linear-gradient(to bottom left, #4854a2, #3d3d3d);
   color: white;
 }
-.container {
-  max-width: 400px;
-  min-width: 360px;
-}
+
 .title {
   font-size: 50px;
   font-weight: 500;
@@ -43,7 +40,7 @@
   position: relative;
   top: -50px;
   font-size: 40pt;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .temp span {

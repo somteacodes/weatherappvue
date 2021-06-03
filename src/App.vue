@@ -1,6 +1,6 @@
 <template>
   <div id="main" :class="isDay ? 'day' : 'night'">
-    <div class="container my-5">
+    <div class="container my-5" style="max-width: 400px; min-width: 360px">
       <h1 class="title text-center">Weather in</h1>
       <form class="search-location" v-on:submit.prevent="getWeather">
         <input
@@ -18,11 +18,11 @@
       >
         <!-- weather animation container -->
         <div>
-          <div icon="sunny" v-if="clearSky">
+          <div icon="sunny" v-if="clearSky" data-label="Sunny">
             <span class="sun"></span>
           </div>
 
-          <div icon="snowy" v-if="snowy">
+          <div icon="snowy" v-if="snowy" data-label="Chilly">
             <ul>
               <li></li>
               <li></li>
@@ -40,7 +40,7 @@
             </ul>
           </div>
 
-          <div icon="stormy" v-if="stormy">
+          <div icon="stormy" v-if="stormy" data-label="Soggy">
             <span class="cloud"></span>
             <ul>
               <li></li>
@@ -50,11 +50,11 @@
               <li></li>
             </ul>
           </div>
-          <div icon="cloudy" v-if="cloudy">
+          <div icon="cloudy" v-if="cloudy" data-label="Perfect">
             <span class="cloud"></span>
             <span class="cloud"></span>
           </div>
-          <div icon="nightmoon" v-if="clearNight">
+          <div icon="nightmoon" v-if="clearNight" data-label="Cool!">
             <span class="moon"></span>
             <span class="meteor"></span>
           </div>
@@ -231,6 +231,6 @@ export default {
 </script>
 
 <style scoped>
-@import "./assets/animation.css";
 @import "./assets/custom.css";
+@import "./assets/animation.css";
 </style>
