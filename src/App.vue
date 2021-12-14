@@ -143,7 +143,7 @@ export default {
   methods: {
     getWeather: async function () {
       console.log(this.citySearch);
-      const key = "5299e83c9cf2fef510fb8ddaa3206ac8";
+      const key = process.env.VUE_APP_API_KEY
       const baseURL = `http://api.openweathermap.org/data/2.5/weather?q=${this.citySearch}&appid=${key}&units=metric`;
 
       //fetch weather
